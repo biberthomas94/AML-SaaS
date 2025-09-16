@@ -80,6 +80,7 @@ Provide an analyst view to triage alerts quickly.
 
 ## Agent Prompt
 “Create an Alert Queue React page with filters and keyboard triage. Connect to alert API and detail view.”
+"
 biberthomas94/AML-SaaS,Case management (lifecycle + evidence + timeline),"backlog,cases,ui,api,audit","## Goal
 Turn alerts into cases and track the investigation lifecycle.
 
