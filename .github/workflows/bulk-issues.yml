@@ -1,0 +1,30 @@
+name: Bulk issue creator (browser)
+
+on:
+  workflow_dispatch:
+    inputs:
+      write:
+        description: "Change to 'true' to actually create issues. Leave 'false' to preview."
+        required: true
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+
+permissions:
+  contents: read
+  issues: write
+  projects: write
+
+jobs:
+  bulk_issue_creator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout config
+        uses: actions/checkout@v4
+      - name: Create bulk issues
+        uses: benbalter/bulk-issue-creator@v2
+        with:
+          write: ${{ github.event.inputs.write }}
+          csv_path: config/data.csv
+          template_path: config/template.md.mustache
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
