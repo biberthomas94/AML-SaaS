@@ -1,0 +1,16 @@
+name: Auto-add issues to project (by label)
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  add_to_project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: ${{ secrets.PROJECT_URL }}
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: backlog
+          label-operator: OR
