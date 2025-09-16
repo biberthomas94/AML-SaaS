@@ -1,5 +1,5 @@
 repository,title,labels,description
-<your-username-or-org>/<your-repo>,"Secure project scaffold (monorepo, CI, Docker)","backlog,infra,ui,api","## Goal
+biberthomas94/AML-SaaS,"Secure project scaffold (monorepo, CI, Docker)","backlog,infra,ui,api","## Goal
 Create the base repository structure so agents can start coding with CI in place.
 
 ## Acceptance Criteria
@@ -11,7 +11,7 @@ Create the base repository structure so agents can start coding with CI in place
 ## Agent Prompt
 “Initialize a monorepo with `/apps/api` (NestJS), `/apps/web` (React), `/packages` (shared libs), `/infra` (Terraform placeholders). Add GitHub Actions for lint/test/build and Dockerfiles for API/Web.”
 "
-<your-username-or-org>/<your-repo>,"Cloud baseline (Terraform for VPC, RDS, Secrets)","backlog,infra","## Goal
+biberthomas94/AML-SaaS,"Cloud baseline (Terraform for VPC, RDS, Secrets)","backlog,infra","## Goal
 Provision minimal cloud (staging) with database and secrets.
 
 ## Acceptance Criteria
@@ -23,7 +23,7 @@ Provision minimal cloud (staging) with database and secrets.
 ## Agent Prompt
 “Write Terraform for VPC, subnets, security groups, RDS Postgres, and Secrets Manager. Output state to S3 with DynamoDB lock. Provide docs for running commands.”
 "
-<your-username-or-org>/<your-repo>,Database schema v0 (Prisma + migrations + ERD),"backlog,db,infra","## Goal
+biberthomas94/AML-SaaS,Database schema v0 (Prisma + migrations + ERD),"backlog,db,infra","## Goal
 Create initial schema and migrations for core AML entities.
 
 ## Acceptance Criteria
@@ -35,7 +35,7 @@ Create initial schema and migrations for core AML entities.
 ## Agent Prompt
 “Create SQL/Prisma migrations for core AML entities and an ERD export. Include seed fixtures for 50 customers and 1,000 transactions.”
 "
-<your-username-or-org>/<your-repo>,Auth & RBAC (Auth0/Cognito + roles),"backlog,auth,api,ui","## Goal
+biberthomas94/AML-SaaS,Auth & RBAC (Auth0/Cognito + roles),"backlog,auth,api,ui","## Goal
 Enable secure sign-in and enforce role-based access.
 
 ## Acceptance Criteria
@@ -47,7 +47,7 @@ Enable secure sign-in and enforce role-based access.
 ## Agent Prompt
 “Integrate Auth0/Cognito OIDC into API/Web. Implement RBAC middleware for roles {analyst, reviewer, admin}. Provide seed users and role-aware nav.”
 "
-<your-username-or-org>/<your-repo>,Transaction import (CSV/JSON + validation),"backlog,monitoring,api,ui","## Goal
+biberthomas94/AML-SaaS,Transaction import (CSV/JSON + validation),"backlog,monitoring,api,ui","## Goal
 Let users upload transactions into the system with validation.
 
 ## Acceptance Criteria
@@ -58,7 +58,7 @@ Let users upload transactions into the system with validation.
 ## Agent Prompt
 “Build transaction ingestion API and React upload page with schema validation and error CSV output for rejected rows.”
 "
-<your-username-or-org>/<your-repo>,"JSON rules engine (threshold, structuring, velocity)","backlog,monitoring,api,db","## Goal
+biberthomas94/AML-SaaS,"JSON rules engine (threshold, structuring, velocity)","backlog,monitoring,api,db","## Goal
 Config-driven detection engine with explainable outputs.
 
 ## Acceptance Criteria
@@ -70,7 +70,7 @@ Config-driven detection engine with explainable outputs.
 ## Agent Prompt
 “Implement a JSON-driven rules engine with priority/time windows. Add three rules (threshold/structuring/velocity). Persist alerts and rationale. Ship tests and sample rules.”
 "
-<your-username-or-org>/<your-repo>,Alert queue UI (filters + keyboard triage),"backlog,ui,monitoring","## Goal
+biberthomas94/AML-SaaS,Alert queue UI (filters + keyboard triage),"backlog,ui,monitoring","## Goal
 Provide an analyst view to triage alerts quickly.
 
 ## Acceptance Criteria
@@ -80,8 +80,7 @@ Provide an analyst view to triage alerts quickly.
 
 ## Agent Prompt
 “Create an Alert Queue React page with filters and keyboard triage. Connect to alert API and detail view.”
-"
-<your-username-or-org>/<your-repo>,Case management (lifecycle + evidence + timeline),"backlog,cases,ui,api,audit","## Goal
+biberthomas94/AML-SaaS,Case management (lifecycle + evidence + timeline),"backlog,cases,ui,api,audit","## Goal
 Turn alerts into cases and track the investigation lifecycle.
 
 ## Acceptance Criteria
@@ -93,7 +92,7 @@ Turn alerts into cases and track the investigation lifecycle.
 ## Agent Prompt
 “Add Case endpoints and React detail page. Evidence uploads to S3. Timeline from audit_log. Alerts link to cases.”
 "
-<your-username-or-org>/<your-repo>,Customer onboarding (form + sanctions/KYC stub + risk),"backlog,kyc,ui,api","## Goal
+biberthomas94/AML-SaaS,Customer onboarding (form + sanctions/KYC stub + risk),"backlog,kyc,ui,api","## Goal
 Capture customer data, perform stub screening, assign risk.
 
 ## Acceptance Criteria
@@ -104,7 +103,7 @@ Capture customer data, perform stub screening, assign risk.
 ## Agent Prompt
 “Build Customer Onboarding UI + API. Add sanctions/PEP screening stub and compute risk score with explainable rationale. Feature-flag providers later.”
 "
-<your-username-or-org>/<your-repo>,Provider adapters (KYC & sanctions) with sandbox mode,"backlog,kyc,api","## Goal
+biberthomas94/AML-SaaS,Provider adapters (KYC & sanctions) with sandbox mode,"backlog,kyc,api","## Goal
 Allow swapping real providers without changing core code.
 
 ## Acceptance Criteria
@@ -115,7 +114,7 @@ Allow swapping real providers without changing core code.
 ## Agent Prompt
 “Create provider-agnostic adapters for KYC and sanctions with env-driven selection and sandbox mode. Read credentials from secrets manager.”
 "
-<your-username-or-org>/<your-repo>,SAR model + auto-draft narrative + export,"backlog,sar,cases,api,ui","## Goal
+biberthomas94/AML-SaaS,SAR model + auto-draft narrative + export,"backlog,sar,cases,api,ui","## Goal
 Generate SAR drafts aligned to FinCEN Form 111 and exportable.
 
 ## Acceptance Criteria
@@ -127,7 +126,7 @@ Generate SAR drafts aligned to FinCEN Form 111 and exportable.
 ## Agent Prompt
 “Model FinCEN SAR fields. Implement draft generator using case/alert/customer data; export PDF/DOCX; version and lock after approval.”
 "
-<your-username-or-org>/<your-repo>,SAR reviewer approval gate (lock + audit hash),"backlog,sar,audit,api,ui","## Goal
+biberthomas94/AML-SaaS,SAR reviewer approval gate (lock + audit hash),"backlog,sar,audit,api,ui","## Goal
 Enforce human-in-the-loop approval and tamper evidence.
 
 ## Acceptance Criteria
@@ -138,7 +137,7 @@ Enforce human-in-the-loop approval and tamper evidence.
 ## Agent Prompt
 “Add approval endpoint/UI; enforce role check; record audit hash and approver; prevent further edits once locked.”
 "
-<your-username-or-org>/<your-repo>,"Travel Rule records for ≥ $3,000 equivalent","backlog,monitoring,audit,db,api","## Goal
+biberthomas94/AML-SaaS,"Travel Rule records for ≥ $3,000 equivalent","backlog,monitoring,audit,db,api","## Goal
 Capture originator/beneficiary info for qualifying CVC transfers.
 
 ## Acceptance Criteria
@@ -149,7 +148,7 @@ Capture originator/beneficiary info for qualifying CVC transfers.
 ## Agent Prompt
 “Extend schema + ingestion to capture Travel Rule data when amount ≥ $3,000 equivalent and persist retention metadata (5y).”
 "
-<your-username-or-org>/<your-repo>,CTR candidate aggregation for cash > $10k/day,"backlog,monitoring,db,api","## Goal
+biberthomas94/AML-SaaS,CTR candidate aggregation for cash > $10k/day,"backlog,monitoring,db,api","## Goal
 Track daily cash totals to support CTR workflows.
 
 ## Acceptance Criteria
@@ -160,7 +159,7 @@ Track daily cash totals to support CTR workflows.
 ## Agent Prompt
 “Implement CTR aggregation logic for cash transactions >$10k/day and export candidate report.”
 "
-<your-username-or-org>/<your-repo>,Append-only audit log with hash chaining,"backlog,audit,api,db","## Goal
+biberthomas94/AML-SaaS,Append-only audit log with hash chaining,"backlog,audit,api,db","## Goal
 Create a tamper-evident record of sensitive actions and changes.
 
 ## Acceptance Criteria
@@ -172,7 +171,7 @@ Create a tamper-evident record of sensitive actions and changes.
 ## Agent Prompt
 “Create append-only audit_log with hash chaining; log sensitive actions; add export endpoint.”
 "
-<your-username-or-org>/<your-repo>,Rules versioning + change control UI,"backlog,monitoring,audit,ui,api","## Goal
+biberthomas94/AML-SaaS,Rules versioning + change control UI,"backlog,monitoring,audit,ui,api","## Goal
 Track every rule change with justification and allow diffs.
 
 ## Acceptance Criteria
@@ -183,7 +182,7 @@ Track every rule change with justification and allow diffs.
 ## Agent Prompt
 “Implement rules versioning and a UI to diff prior vs current, with required justification text when publishing.”
 "
-<your-username-or-org>/<your-repo>,"Dashboard & metrics (alerts, cases, SARs, FP rate)","backlog,ui,api","## Goal
+biberthomas94/AML-SaaS,"Dashboard & metrics (alerts, cases, SARs, FP rate)","backlog,ui,api","## Goal
 Give quick visibility into operational status.
 
 ## Acceptance Criteria
@@ -194,7 +193,7 @@ Give quick visibility into operational status.
 ## Agent Prompt
 “Build a Dashboard page calling metrics endpoints for alerts/cases/SARs and charts.”
 "
-<your-username-or-org>/<your-repo>,Demo dataset & script (kiosk scenarios),"backlog,demo,db,ui","## Goal
+biberthomas94/AML-SaaS,Demo dataset & script (kiosk scenarios),"backlog,demo,db,ui","## Goal
 Seed realistic Bitcoin ATM scenarios and provide a narrated demo.
 
 ## Acceptance Criteria
@@ -205,7 +204,7 @@ Seed realistic Bitcoin ATM scenarios and provide a narrated demo.
 ## Agent Prompt
 “Seed realistic CVC kiosk scenarios and write a narrated demo script from Customer → Transaction → Alert → Case → SAR.”
 "
-<your-username-or-org>/<your-repo>,"Security hardening (secrets, PII, scans)","backlog,infra,security,audit","## Goal
+biberthomas94/AML-SaaS,"Security hardening (secrets, PII, scans)","backlog,infra,security,audit","## Goal
 Protect secrets and personal data; add basic security checks.
 
 ## Acceptance Criteria
@@ -216,7 +215,7 @@ Protect secrets and personal data; add basic security checks.
 ## Agent Prompt
 “Route secrets to cloud secrets manager; encrypt sensitive columns; scrub logs; add ZAP/Semgrep CI steps.”
 "
-<your-username-or-org>/<your-repo>,UAT checklist & end-to-end sign-off,"backlog,demo,ui,api,audit","## Goal
+biberthomas94/AML-SaaS,UAT checklist & end-to-end sign-off,"backlog,demo,ui,api,audit","## Goal
 Validate the full workflow prior to demo.
 
 ## Acceptance Criteria
