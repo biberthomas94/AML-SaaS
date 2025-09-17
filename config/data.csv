@@ -1,4 +1,4 @@
-title,labels,description
+repository,title,labels,description
 biberthomas94/AML-SaaS,"Secure project scaffold (monorepo, CI, Docker)","backlog,infra,ui,api","## Goal
 Create the base repository structure so agents can start coding with CI in place.
 
