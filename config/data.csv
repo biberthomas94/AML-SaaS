@@ -72,7 +72,6 @@ Config-driven detection engine with explainable outputs.
 "
 biberthomas94/AML-SaaS,Alert queue UI (filters + keyboard triage),"backlog,ui,monitoring","## Goal
 Provide an analyst view to triage alerts quickly.
-
 ## Acceptance Criteria
 - [ ] Filter by date, rule, severity/status, customer
 - [ ] Pagination + keyboard navigation
