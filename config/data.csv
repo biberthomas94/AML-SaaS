@@ -1,6 +1,7 @@
 repository,title,labels,description
 biberthomas94/AML-SaaS,"Secure project scaffold (monorepo, CI, Docker)","backlog,infra,ui,api","## Goal
 Create the base repository structure so agents can start coding with CI in place.
+
 ## Acceptance Criteria
 - [ ] Monorepo with `/apps/api`, `/apps/web`, `/packages/*`, `/infra`
 - [ ] GitHub Actions workflow runs (lint/test/build placeholder)
@@ -8,8 +9,7 @@ Create the base repository structure so agents can start coding with CI in place
 - [ ] README updated with how to run
 
 ## Agent Prompt
-“Initialize a monorepo with `/apps/api` (NestJS), `/apps/web` (React), `/packages` (shared libs), `/infra` (Terraform placeholders). Add GitHub Actions for lint/test/build and Dockerfiles for API/Web.”
-"
+Initialize a monorepo with `/apps/api` (NestJS), `/apps/web` (React), `/packages` (shared libs), `/infra` (Terraform placeholders). Add GitHub Actions for lint/test/build and Dockerfiles for API/Web."
 biberthomas94/AML-SaaS,"Cloud baseline (Terraform for VPC, RDS, Secrets)","backlog,infra","## Goal
 Provision minimal cloud (staging) with database and secrets.
 
@@ -20,9 +20,8 @@ Provision minimal cloud (staging) with database and secrets.
 - [ ] Docs: how to `terraform init/plan/apply`
 
 ## Agent Prompt
-“Write Terraform for VPC, subnets, security groups, RDS Postgres, and Secrets Manager. Output state to S3 with DynamoDB lock. Provide docs for running commands.”
-"
-biberthomas94/AML-SaaS,Database schema v0 (Prisma + migrations + ERD),"backlog,db,infra","## Goal
+Write Terraform for VPC, subnets, security groups, RDS Postgres, and Secrets Manager. Output state to S3 with DynamoDB lock. Provide docs for running commands."
+biberthomas94/AML-SaaS,"Database schema v0 (Prisma + migrations + ERD)","backlog,db,infra","## Goal
 Create initial schema and migrations for core AML entities.
 
 ## Acceptance Criteria
@@ -32,9 +31,8 @@ Create initial schema and migrations for core AML entities.
 - [ ] ERD image exported and committed
 
 ## Agent Prompt
-“Create SQL/Prisma migrations for core AML entities and an ERD export. Include seed fixtures for 50 customers and 1,000 transactions.”
-"
-biberthomas94/AML-SaaS,Auth & RBAC (Auth0/Cognito + roles),"backlog,auth,api,ui","## Goal
+Create SQL/Prisma migrations for core AML entities and an ERD export. Include seed fixtures for 50 customers and 1,000 transactions."
+biberthomas94/AML-SaaS,"Auth & RBAC (Auth0/Cognito + roles)","backlog,auth,api,ui","## Goal
 Enable secure sign-in and enforce role-based access.
 
 ## Acceptance Criteria
@@ -44,9 +42,8 @@ Enable secure sign-in and enforce role-based access.
 - [ ] Seed/demo users provisioned
 
 ## Agent Prompt
-“Integrate Auth0/Cognito OIDC into API/Web. Implement RBAC middleware for roles {analyst, reviewer, admin}. Provide seed users and role-aware nav.”
-"
-biberthomas94/AML-SaaS,Transaction import (CSV/JSON + validation),"backlog,monitoring,api,ui","## Goal
+Integrate Auth0/Cognito OIDC into API/Web. Implement RBAC middleware for roles {analyst, reviewer, admin}. Provide seed users and role-aware nav."
+biberthomas94/AML-SaaS,"Transaction import (CSV/JSON + validation)","backlog,monitoring,api,ui","## Goal
 Let users upload transactions into the system with validation.
 
 ## Acceptance Criteria
@@ -55,8 +52,7 @@ Let users upload transactions into the system with validation.
 - [ ] Sample input files and error CSV provided
 
 ## Agent Prompt
-“Build transaction ingestion API and React upload page with schema validation and error CSV output for rejected rows.”
-"
+Build transaction ingestion API and a React upload page with schema validation and error CSV output for rejected rows."
 biberthomas94/AML-SaaS,"JSON rules engine (threshold, structuring, velocity)","backlog,monitoring,api,db","## Goal
 Config-driven detection engine with explainable outputs.
 
@@ -67,19 +63,18 @@ Config-driven detection engine with explainable outputs.
 - [ ] Unit tests + example JSON rules
 
 ## Agent Prompt
-“Implement a JSON-driven rules engine with priority/time windows. Add three rules (threshold/structuring/velocity). Persist alerts and rationale. Ship tests and sample rules.”
-"
-biberthomas94/AML-SaaS,Alert queue UI (filters + keyboard triage),"backlog,ui,monitoring","## Goal
+Implement a JSON-driven rules engine with priority/time windows. Add three rules (threshold/structuring/velocity). Persist alerts and rationale. Ship tests and sample rules."
+biberthomas94/AML-SaaS,"Alert queue UI (filters + keyboard triage)","backlog,ui,monitoring","## Goal
 Provide an analyst view to triage alerts quickly.
+
 ## Acceptance Criteria
 - [ ] Filter by date, rule, severity/status, customer
 - [ ] Pagination + keyboard navigation
 - [ ] Clicking opens details with linked transactions
 
 ## Agent Prompt
-“Create an Alert Queue React page with filters and keyboard triage. Connect to alert API and detail view.”
-"
-biberthomas94/AML-SaaS,Case management (lifecycle + evidence + timeline),"backlog,cases,ui,api,audit","## Goal
+Create an Alert Queue React page with filters and keyboard triage. Connect to alert API and detail view."
+biberthomas94/AML-SaaS,"Case management (lifecycle + evidence + timeline)","backlog,cases,ui,api,audit","## Goal
 Turn alerts into cases and track the investigation lifecycle.
 
 ## Acceptance Criteria
@@ -89,9 +84,8 @@ Turn alerts into cases and track the investigation lifecycle.
 - [ ] Link alerts ↔ cases
 
 ## Agent Prompt
-“Add Case endpoints and React detail page. Evidence uploads to S3. Timeline from audit_log. Alerts link to cases.”
-"
-biberthomas94/AML-SaaS,Customer onboarding (form + sanctions/KYC stub + risk),"backlog,kyc,ui,api","## Goal
+Add Case endpoints and a React detail page. Evidence uploads to S3. Timeline from audit_log. Alerts link to cases."
+biberthomas94/AML-SaaS,"Customer onboarding (form + sanctions/KYC stub + risk)","backlog,kyc,ui,api","## Goal
 Capture customer data, perform stub screening, assign risk.
 
 ## Acceptance Criteria
@@ -100,9 +94,8 @@ Capture customer data, perform stub screening, assign risk.
 - [ ] Risk rating (Low/Med/High) + rationale stored and displayed
 
 ## Agent Prompt
-“Build Customer Onboarding UI + API. Add sanctions/PEP screening stub and compute risk score with explainable rationale. Feature-flag providers later.”
-"
-biberthomas94/AML-SaaS,Provider adapters (KYC & sanctions) with sandbox mode,"backlog,kyc,api","## Goal
+Build Customer Onboarding UI + API. Add sanctions/PEP screening stub and compute risk score with explainable rationale. Feature-flag providers later."
+biberthomas94/AML-SaaS,"Provider adapters (KYC & sanctions) with sandbox mode","backlog,kyc,api","## Goal
 Allow swapping real providers without changing core code.
 
 ## Acceptance Criteria
@@ -111,9 +104,8 @@ Allow swapping real providers without changing core code.
 - [ ] Sandbox/test keys read from secrets manager
 
 ## Agent Prompt
-“Create provider-agnostic adapters for KYC and sanctions with env-driven selection and sandbox mode. Read credentials from secrets manager.”
-"
-biberthomas94/AML-SaaS,SAR model + auto-draft narrative + export,"backlog,sar,cases,api,ui","## Goal
+Create provider-agnostic adapters for KYC and sanctions with env-driven selection and sandbox mode. Read credentials from secrets manager."
+biberthomas94/AML-SaaS,"SAR model + auto-draft narrative + export","backlog,sar,cases,api,ui","## Goal
 Generate SAR drafts aligned to FinCEN Form 111 and exportable.
 
 ## Acceptance Criteria
@@ -123,9 +115,8 @@ Generate SAR drafts aligned to FinCEN Form 111 and exportable.
 - [ ] Versioning with immutable history
 
 ## Agent Prompt
-“Model FinCEN SAR fields. Implement draft generator using case/alert/customer data; export PDF/DOCX; version and lock after approval.”
-"
-biberthomas94/AML-SaaS,SAR reviewer approval gate (lock + audit hash),"backlog,sar,audit,api,ui","## Goal
+Model FinCEN SAR fields. Implement draft generator using case/alert/customer data; export PDF/DOCX; version and lock after approval."
+biberthomas94/AML-SaaS,"SAR reviewer approval gate (lock + audit hash)","backlog,sar,audit,api,ui","## Goal
 Enforce human-in-the-loop approval and tamper evidence.
 
 ## Acceptance Criteria
@@ -134,8 +125,7 @@ Enforce human-in-the-loop approval and tamper evidence.
 - [ ] UI shows locked state; API denies further edits
 
 ## Agent Prompt
-“Add approval endpoint/UI; enforce role check; record audit hash and approver; prevent further edits once locked.”
-"
+Add approval endpoint/UI; enforce role check; record audit hash and approver; prevent further edits once locked."
 biberthomas94/AML-SaaS,"Travel Rule records for ≥ $3,000 equivalent","backlog,monitoring,audit,db,api","## Goal
 Capture originator/beneficiary info for qualifying CVC transfers.
 
@@ -145,9 +135,8 @@ Capture originator/beneficiary info for qualifying CVC transfers.
 - [ ] Link record to transaction and case when applicable
 
 ## Agent Prompt
-“Extend schema + ingestion to capture Travel Rule data when amount ≥ $3,000 equivalent and persist retention metadata (5y).”
-"
-biberthomas94/AML-SaaS,CTR candidate aggregation for cash > $10k/day,"backlog,monitoring,db,api","## Goal
+Extend schema + ingestion to capture Travel Rule data when amount ≥ $3,000 equivalent and persist retention metadata (5y)."
+biberthomas94/AML-SaaS,"CTR candidate aggregation for cash > $10k/day","backlog,monitoring,db,api","## Goal
 Track daily cash totals to support CTR workflows.
 
 ## Acceptance Criteria
@@ -156,9 +145,8 @@ Track daily cash totals to support CTR workflows.
 - [ ] CSV export for filing workflow
 
 ## Agent Prompt
-“Implement CTR aggregation logic for cash transactions >$10k/day and export candidate report.”
-"
-biberthomas94/AML-SaaS,Append-only audit log with hash chaining,"backlog,audit,api,db","## Goal
+Implement CTR aggregation logic for cash transactions >$10k/day and export candidate report."
+biberthomas94/AML-SaaS,"Append-only audit log with hash chaining","backlog,audit,api,db","## Goal
 Create a tamper-evident record of sensitive actions and changes.
 
 ## Acceptance Criteria
@@ -168,9 +156,8 @@ Create a tamper-evident record of sensitive actions and changes.
 - [ ] Export endpoint for auditors
 
 ## Agent Prompt
-“Create append-only audit_log with hash chaining; log sensitive actions; add export endpoint.”
-"
-biberthomas94/AML-SaaS,Rules versioning + change control UI,"backlog,monitoring,audit,ui,api","## Goal
+Create an append-only audit_log with hash chaining; log sensitive actions; add an export endpoint."
+biberthomas94/AML-SaaS,"Rules versioning + change control UI","backlog,monitoring,audit,ui,api","## Goal
 Track every rule change with justification and allow diffs.
 
 ## Acceptance Criteria
@@ -179,8 +166,7 @@ Track every rule change with justification and allow diffs.
 - [ ] Justification text required on publish
 
 ## Agent Prompt
-“Implement rules versioning and a UI to diff prior vs current, with required justification text when publishing.”
-"
+Implement rules versioning and a UI to diff prior vs current, with required justification text when publishing."
 biberthomas94/AML-SaaS,"Dashboard & metrics (alerts, cases, SARs, FP rate)","backlog,ui,api","## Goal
 Give quick visibility into operational status.
 
@@ -190,9 +176,8 @@ Give quick visibility into operational status.
 - [ ] `/metrics/overview` endpoint powers the UI
 
 ## Agent Prompt
-“Build a Dashboard page calling metrics endpoints for alerts/cases/SARs and charts.”
-"
-biberthomas94/AML-SaaS,Demo dataset & script (kiosk scenarios),"backlog,demo,db,ui","## Goal
+Build a Dashboard page calling metrics endpoints for alerts/cases/SARs and charts."
+biberthomas94/AML-SaaS,"Demo dataset & script (kiosk scenarios)","backlog,demo,db,ui","## Goal
 Seed realistic Bitcoin ATM scenarios and provide a narrated demo.
 
 ## Acceptance Criteria
@@ -201,8 +186,7 @@ Seed realistic Bitcoin ATM scenarios and provide a narrated demo.
 - [ ] Screenshots/GIFs captured for PR
 
 ## Agent Prompt
-“Seed realistic CVC kiosk scenarios and write a narrated demo script from Customer → Transaction → Alert → Case → SAR.”
-"
+Seed realistic CVC kiosk scenarios and write a narrated demo script from Customer → Transaction → Alert → Case → SAR."
 biberthomas94/AML-SaaS,"Security hardening (secrets, PII, scans)","backlog,infra,security,audit","## Goal
 Protect secrets and personal data; add basic security checks.
 
@@ -212,9 +196,8 @@ Protect secrets and personal data; add basic security checks.
 - [ ] Add Semgrep/OWASP ZAP light scan in CI; green by default
 
 ## Agent Prompt
-“Route secrets to cloud secrets manager; encrypt sensitive columns; scrub logs; add ZAP/Semgrep CI steps.”
-"
-biberthomas94/AML-SaaS,UAT checklist & end-to-end sign-off,"backlog,demo,ui,api,audit","## Goal
+Route secrets to cloud secrets manager; encrypt sensitive columns; scrub logs; add ZAP/Semgrep CI steps."
+biberthomas94/AML-SaaS,"UAT checklist & end-to-end sign-off","backlog,demo,ui,api,audit","## Goal
 Validate the full workflow prior to demo.
 
 ## Acceptance Criteria
@@ -223,6 +206,4 @@ Validate the full workflow prior to demo.
 - [ ] Sign-off recorded in audit_log
 
 ## Agent Prompt
-“Generate UAT checklist runs across onboarding, alerts, cases, SAR, audit, Travel Rule, CTR; produce pass/fail report and write sign-off to audit_log.”
-"
-
+Generate UAT checklist runs across onboarding, alerts, cases, SAR, audit, Travel Rule, CTR; produce a pass/fail report and write sign-off to audit_log."
